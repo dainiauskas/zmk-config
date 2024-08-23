@@ -37,16 +37,16 @@
             label = "GO_FUNC";
         };
     };
-
-    chosen {
-        zmk,backlight = &backlight;
-    };
     
     backlight {
         compatible = "zmk,backlight";
         label = "Backlight";
         levels = <5>;
         pin = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+    };
+
+    chosen {
+        zmk,backlight = &backlight;
     };
 
     keymap {
