@@ -10,6 +10,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    chosen {
+        zmk,backlight = &backlight;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -38,6 +42,13 @@
         };
     };
 
+    backlight {
+        compatible = "zmk,backlight";
+        label = "Backlight";
+        levels = <5>;
+        pin = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+    };
+    
     keymap {
         compatible = "zmk,keymap";
 
