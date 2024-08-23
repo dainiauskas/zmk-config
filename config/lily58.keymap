@@ -38,6 +38,10 @@
         };
     };
 
+    chosen {
+        zmk,backlight = &backlight;
+    };
+    
     backlight {
         compatible = "zmk,backlight";
         label = "Backlight";
