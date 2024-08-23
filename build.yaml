@@ -20,7 +20,7 @@
 include:
   - board: nice_nano_v2
     shield: lily58_left
-    cmake-args: -DCONFIG_ZMK_DISPLAY=y -DCONFIG_SSD1306=y -DCONFIG_I2C=y -DCONFIG_I2C_0=y -DCONFIG_SSD1306_WIDTH=128 -DCONFIG_SSD1306_HEIGHT=32 -DCONFIG_SSD1306_I2C_ADDR=0x3C
+    # cmake-args: -DCONFIG_ZMK_DISPLAY=y -DCONFIG_SSD1306=y -DCONFIG_I2C=y -DCONFIG_I2C_0=y -DCONFIG_SSD1306_WIDTH=128 -DCONFIG_SSD1306_HEIGHT=32 -DCONFIG_SSD1306_I2C_ADDR=0x3C
   - board: nice_nano_v2
     shield: lily58_right
   - board: nice_nano_v2
