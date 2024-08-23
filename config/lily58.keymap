@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/backlight.h>
 
 / {
     combos {
@@ -35,6 +36,13 @@
             bindings = <&kp RG(F) &kp F &kp U &kp N &kp C &kp LPAR &kp RPAR &kp SPACE &kp LPAR &kp E &kp R &kp R &kp SPACE &kp E &kp R &kp R &kp O &kp R &kp RPAR &kp SPACE &kp RBKT &kp RET &kp TAB &kp R &kp E &kp T &kp U &kp R &kp N &kp RET &kp RBRC>;
             label = "GO_FUNC";
         };
+    };
+
+    backlight {
+        compatible = "zmk,backlight";
+        label = "Backlight";
+        levels = <5>;
+        pin = <&gpio0 13 GPIO_ACTIVE_HIGH>;
     };
 
     keymap {
