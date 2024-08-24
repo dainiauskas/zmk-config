@@ -47,13 +47,13 @@
         };
 
         lm0: lm0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
             bindings =
                 <&macro_press>,
-                <&tog 0>,
+                <&macro_param_1to1 &tog MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
+                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER>;
 
             label = "LM0";
         };
@@ -105,11 +105,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                    &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_EQUAL
-&trans     &trans           &trans           &trans           &trans           &trans                             &trans           &trans           &kp UP           &trans           &trans           &kp KP_PLUS
-&kp F1     &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                             &kp HOME         &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp KP_MINUS
-&kp F7     &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans    &trans  &kp END          &trans           &trans           &trans           &trans           &kp BSLH
-                                             &trans           &trans           &mo 3            &trans    &trans  &trans           &trans           &trans
+&kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                    &kp KP_NUMBER_6                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_EQUAL
+&trans     &trans           &trans           &trans           &trans           &trans                             &trans                           &trans           &kp UP           &trans           &trans           &kp KP_PLUS
+&kp F1     &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                             &kp HOME                         &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp KP_MINUS
+&kp F7     &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans    &trans  &kp END                          &trans           &trans           &trans           &trans           &kp BSLH
+                                             &trans           &trans           &mo 3            &trans    &trans  &lm0 0 RGB_COLOR_HSB_VAL(0,0,0)  &trans           &trans
             >;
         };
 
