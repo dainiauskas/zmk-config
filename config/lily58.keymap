@@ -25,6 +25,7 @@
 
     macros {
         lm: lm {
+            compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
