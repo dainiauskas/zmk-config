@@ -25,7 +25,6 @@
 
     macros {
         lm: lm {
-            compatible = "zmk,behavior-macro";
             wait-ms = <0>;
             tap-ms = <0>;
             bindings =
@@ -36,12 +35,12 @@
                 <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
         };
 
-        lay1: lay1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 1>;
-            label = "LAY1";
-        };
+        // lay1: lay1 {
+        //     compatible = "zmk,behavior-macro";
+        //     #binding-cells = <0>;
+        //     bindings = <&mo 1>;
+        //     label = "LAY1";
+        // };
     };
 
     keymap {
