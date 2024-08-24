@@ -17,6 +17,10 @@
 };
 
 / {
+    chosen {
+        zmk,underglow = &led_strip;
+    };
+    
     combos {
         compatible = "zmk,combos";
 
