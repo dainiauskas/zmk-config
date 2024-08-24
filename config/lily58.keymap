@@ -39,6 +39,18 @@
                 <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
         };
 
+        lm2: lm2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&tog 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(239,97,49)>;
+
+            label = "LM2";
+        };
+
         // lay1: lay1 {
         //     compatible = "zmk,behavior-macro";
         //     #binding-cells = <0>;
