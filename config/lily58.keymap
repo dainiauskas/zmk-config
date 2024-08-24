@@ -14,8 +14,15 @@
 &led_strip { chain-length = <1>; };
 
 / {
-    chosen { zmk,underglow = &led_strip; };
+    chosen {
+        zmk,underglow = &led_strip;
+        zmk,battery = &vbatt;
+    };
 
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
+    
     combos { compatible = "zmk,combos"; };
 
     keymap {
