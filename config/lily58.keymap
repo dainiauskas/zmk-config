@@ -46,7 +46,7 @@
             label = "LM2";
         };
 
-        lm0: lm0 {
+        lm: lm0 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -71,11 +71,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                                 &kp N6  &kp N7    &kp N8     &kp N9   &kp N0                     &mt TILDE GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                                  &kp Y   &kp U     &kp I      &kp O    &kp P                      &mt MINUS PLUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                                  &kp H   &kp J     &kp K      &kp L    &mt LEFT_PARENTHESIS SEMI  &mt RIGHT_PARENTHESIS SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N   &kp M     &kp COMMA  &kp DOT  &mt TILDE FSLH             &kp RSHFT
-                           &kp LALT  &kp LGUI  &tog 1  &kp SPACE               &kp ENTER              &lm2    &kp BSPC  &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                                                            &kp N6                               &kp N7    &kp N8     &kp N9   &kp N0                     &mt TILDE GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                                                             &kp Y                                &kp U     &kp I      &kp O    &kp P                      &mt MINUS PLUS
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                                                             &kp H                                &kp J     &kp K      &kp L    &mt LEFT_PARENTHESIS SEMI  &mt RIGHT_PARENTHESIS SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B                              &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp N                                &kp M     &kp COMMA  &kp DOT  &mt TILDE FSLH             &kp RSHFT
+                           &kp LALT  &kp LGUI  &lm 1 RGB_COLOR_HSB_VAL(62,94,50)  &kp SPACE               &kp ENTER              &lm 2 RGB_COLOR_HSB_VAL(237,100,50)  &kp BSPC  &kp RGUI
             >;
         };
 
@@ -88,11 +88,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans    &trans  &trans    &trans      &trans                       &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1     &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &trans    &trans  &trans    &trans      &trans     &trans    &trans  &trans     &kp MINUS  &kp PLUS   &trans    &trans    &kp PIPE
-                             &trans    &trans      &lm0       &trans    &trans  &trans     &trans     &trans
+&trans     &trans    &trans  &trans    &trans      &trans                                                &trans                            &trans     &trans     &trans    &trans    &trans
+&kp F1     &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                                                &kp F7                            &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                                             &kp CARET                         &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&trans     &trans    &trans  &trans    &trans      &trans                              &trans    &trans  &trans                            &kp MINUS  &kp PLUS   &trans    &trans    &kp PIPE
+                             &trans    &trans      &lm 0 RGB_COLOR_HSB_VAL(120,35,45)  &trans    &trans  &lm 2 RGB_COLOR_HSB_VAL(0,28,47)  &trans     &trans
             >;
         };
 
@@ -105,11 +105,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                    &kp KP_NUMBER_6                  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_EQUAL
-&trans     &trans           &trans           &trans           &trans           &trans                             &trans                           &trans           &kp UP           &trans           &trans           &kp KP_PLUS
-&kp F1     &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                             &kp HOME                         &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp KP_MINUS
-&kp F7     &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans    &trans  &kp END                          &trans           &trans           &trans           &trans           &kp BSLH
-                                             &trans           &trans           &mo 3            &trans    &trans  &lm0 0 RGB_COLOR_HSB_VAL(0,0,0)  &trans           &trans
+&kp TILDE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                    &kp KP_NUMBER_6                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_EQUAL
+&trans     &trans           &trans           &trans           &trans           &trans                             &trans                              &trans           &kp UP           &trans           &trans           &kp KP_PLUS
+&kp F1     &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                             &kp HOME                            &kp LEFT         &kp DOWN         &kp RIGHT        &trans           &kp KP_MINUS
+&kp F7     &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans    &trans  &kp END                             &trans           &trans           &trans           &trans           &kp BSLH
+                                             &trans           &trans           &mo 3            &trans    &trans  &lm 0 RGB_COLOR_HSB_VAL(122,34,54)  &trans           &trans
             >;
         };
 
