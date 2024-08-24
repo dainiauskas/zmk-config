@@ -27,11 +27,15 @@
         lm: lm {
             compatible = "zmk,behavior-macro";
             bindings =
-                <&macro_press &mo 1>,
-                <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>,
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(128,100,100)>,
                 <&macro_pause_for_release>,
-                <&macro_release &mo 1>,
-                <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
         };
 
         // lay1: lay1 {
@@ -54,11 +58,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                                           &kp N6  &kp N7    &kp N8     &kp N9   &kp N0                     &mt TILDE GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                                                            &kp Y   &kp U     &kp I      &kp O    &kp P                      &mt MINUS PLUS
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F     &kp G                                                            &kp H   &kp J     &kp K      &kp L    &mt LEFT_PARENTHESIS SEMI  &mt RIGHT_PARENTHESIS SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V     &kp B   &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &mt TILDE FSLH             &kp RSHFT
-                           &kp LALT  &kp LGUI  &mo 1   &kp SPACE                    &kp ENTER                   &tog 2  &kp BSPC  &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &kp N5                                                           &kp N6  &kp N7    &kp N8     &kp N9   &kp N0                     &mt TILDE GRAVE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R     &kp T                                                            &kp Y   &kp U     &kp I      &kp O    &kp P                      &mt MINUS PLUS
+&kp LCTRL  &kp A   &kp S   &kp D   &kp F     &kp G                                                            &kp H   &kp J     &kp K      &kp L    &mt LEFT_PARENTHESIS SEMI  &mt RIGHT_PARENTHESIS SQT
+&kp LSHFT  &kp Z   &kp X   &kp C   &kp V     &kp B   &mt LEFT_PARENTHESIS LBKT    &mt RIGHT_PARENTHESIS RBKT  &kp N   &kp M     &kp COMMA  &kp DOT  &mt TILDE FSLH             &kp RSHFT
+                           &lm     &kp LGUI  &mo 1   &kp SPACE                    &kp ENTER                   &tog 2  &kp BSPC  &kp RGUI
             >;
         };
 
