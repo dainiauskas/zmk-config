@@ -14,28 +14,6 @@
     };
 };
 
-&i2c1 {
-    status = "okay";
-    ssd1306: ssd1306@3c {
-        compatible = "zmx,ssd1306fb";
-        reg = <0x3c>;
-        label = "SSD1306";
-        width = <128>;
-        height = <32>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <31>;
-        prechargep1 =2>;
-        prechargep2 = <2>;
-        compins = <2>;
-        vcomh = <7>;
-        clock-frequency = <400000>;
-        address-width = <7>;
-        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-    };
-};
-
 // &spi1 {
 // 	compatible = "nordic,nrf-spim";
 // 	status = "okay";
