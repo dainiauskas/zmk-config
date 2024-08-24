@@ -10,6 +10,18 @@
 #include <dt-bindings/zmk/backlight.h>
 
 / {
+    leds {
+        compatible = "zmk,rgb-underglow";
+        label = "RGB Underglow";
+
+        led-strip {
+            compatible = "zmk,led-strip";
+            label = "LED Strip";
+            chain-length = <12>;  // Adjust based on your LED strip
+            gpio = <&gpio0 13 GPIO_ACTIVE_HIGH>;  // Adjust based on your hardware
+        };
+    };
+    
     combos {
         compatible = "zmk,combos";
 
