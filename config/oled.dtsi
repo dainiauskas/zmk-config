@@ -1,10 +1,10 @@
 &i2c0 {
 	status = "okay";
-	sda-pin = <5>;
-	scl-pin = <6>; 
+	sda-pin = <17>;
+	scl-pin = <20>; 
 
 	oled: ssd1306@3c {
-		compatible = "zmk,ssd1306fb";
+		compatible = "solomon,ssd1306fb";
 		reg = <0x3c>;
 		label = "DISPLAY";
 		width = <128>;
