@@ -27,14 +27,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 1>,
+                <&tog 1>,
                 <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(128,100,100)>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&mo 1>,
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
+                <&rgb_ug RGB_COLOR_HSB(128,100,50)>;
 
             label = "LM1";
         };
@@ -49,6 +44,18 @@
                 <&rgb_ug RGB_COLOR_HSB(239,97,49)>;
 
             label = "LM2";
+        };
+
+        lm0: lm0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&tog 0>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(0,0,0)>;
+
+            label = "LM0";
         };
     };
 
@@ -85,7 +92,7 @@
 &kp F1     &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
 &trans     &trans    &trans  &trans    &trans      &trans     &trans    &trans  &trans     &kp MINUS  &kp PLUS   &trans    &trans    &kp PIPE
-                             &trans    &trans      &trans     &trans    &trans  &trans     &trans     &trans
+                             &trans    &trans      &lm0       &trans    &trans  &trans     &trans     &trans
             >;
         };
 
