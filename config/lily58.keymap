@@ -38,8 +38,6 @@
                 <&mo 1>,
                 <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(300,100,50)>;
-
-            label = "Layer1";
         };
     };
 
