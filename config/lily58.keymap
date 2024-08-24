@@ -11,8 +11,8 @@
 
 / {
     chosen {
-        zmk,backlight = &backlight;
-        zmk,display = &display;
+        // zmk,backlight = &backlight;
+        // zmk,display = &display;
     };
 
     combos {
