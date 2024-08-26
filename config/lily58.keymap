@@ -6,8 +6,8 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 
 &led_strip { chain-length = <1>; };
 
@@ -75,13 +75,13 @@
             >;
         };
 
-        controls {
+        device_control {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &rgb_ug RGB_ON  &rgb_ug RGB_OFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans           &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(70,89,47)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans           &trans           &trans           &trans                           &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                             &trans           &trans           &trans                           &trans    &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &sys_reset  &bootloader  &soft_off  &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG
+&none       &none         &none         &none         &none         &none                         &none       &none        &none      &none             &none              &none
+&none       &none         &none         &none         &none         &none                         &none       &none        &none      &none             &none              &none
+&none       &none         &none         &none         &none         &none         &none    &none  &none       &none        &none      &none             &none              &none
+                                        &none         &none         &none         &none    &none  &none       &none        &none
             >;
         };
     };
@@ -89,7 +89,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        control {
+        l3_enable {
             if-layers = <1 2>;
             then-layer = <3>;
         };
